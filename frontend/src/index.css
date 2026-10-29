@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2C2C2E;
+  --color-primary-dark: #1D1D1F;
+  --color-primary-light: #F2EDE4;
+  
+  --color-secondary: #A89A88;
+  --color-secondary-dark: #6E6E73;
+  --color-secondary-light: #FAF8F5;
+  
+  --color-accent: #2C2C2E;
+  --color-accent-dark: #1D1D1F;
+  --color-accent-light: #FAF8F5;
+  
+  --color-emergency: #C4674F;
+  --color-emergency-dark: #A74E37;
+  --color-emergency-light: #F9EBE8;
+}
+
+/* Force warm off-white on html + body to kill any dark bleed */
+html, body {
+  background-color: #FAF8F5 !important;
+  color: #1D1D1F;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white border border-[#E5E1DA] shadow-[0_4px_20px_rgba(0,0,0,0.015)];
+  }
+  
+  .glass-card-hover {
+    @apply hover:shadow-md hover:border-[#A89A88]/30 transition-all duration-300 hover:-translate-y-0.5;
+  }
+
+  .text-gradient-primary {
+    @apply text-[#1D1D1F];
+  }
+
+  .text-gradient-accent {
+    @apply text-[#6E6E73];
+  }
+
+  .text-gradient-emergency {
+    @apply text-[#C4674F];
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#E5E1DA] rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#A89A88]/50;
+}
+
+/* Animation utilities */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Fix leaflet map sizing */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+/* ECG Loader from Uiverse.io */
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #E5E1DA;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #2C2C2E;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Micro Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-btn {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animate-btn:hover {
+  transform: scale(1.02);
+}
+.animate-btn:active {
+  transform: scale(0.98);
+}
+
+.animate-card {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.animate-card:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-blur-transition {
+  transition: backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+

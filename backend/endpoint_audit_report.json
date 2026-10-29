@@ -1,0 +1,274 @@
+[
+  {
+    "endpoint": "/",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": "UniMedicine API v2.0 \u2014 AI-powered Telemedicine Platform, JNTU-GV"
+  },
+  {
+    "endpoint": "/health",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": "healthy"
+  },
+  {
+    "endpoint": "/api/auth/register (Student)",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/register (Admin)",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/login (Student)",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/login (Admin)",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/doctor/register",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/login (Doctor)",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/onboard",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/auth/me",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": "Role: student"
+  },
+  {
+    "endpoint": "/api/doctors",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": "Doctors count: 2"
+  },
+  {
+    "endpoint": "/api/slots",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/slots/generate",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/slots/bulk",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/slots (Doctor)",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/appointments (Student)",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/appointments (Doctor)",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/appointments/analytics/doctor",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/chats (Student)",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/notifications",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/notifications/unread-count",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/notifications/read-all",
+    "method": "PATCH",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/prescriptions/my",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/notices",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/notices",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/reminders",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/reminders",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/reminders/1/toggle",
+    "method": "PATCH",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/reminders/1",
+    "method": "DELETE",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/records",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/ai/diagnose",
+    "method": "POST",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/hospitals",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/admin/stats",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  },
+  {
+    "endpoint": "/api/admin/students",
+    "method": "GET",
+    "status_code": 200,
+    "expected_code": 200,
+    "status": "PASSED",
+    "details": ""
+  }
+]
